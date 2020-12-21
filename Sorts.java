@@ -1,4 +1,4 @@
-public class Sorts{}
+public class Sorts{
 public static void bubbleSort (int[] data) {
   for (int i = 0; i<data.length; i++ ) {
          for (int j = 0; j<data.length-1-i; j++) {
@@ -13,18 +13,20 @@ public static void bubbleSort (int[] data) {
 public static void selectionSort(int[] data){
 
   for (int i = 0; i != data.length; i++) {
-    for (int j = 0; j != data.length-1; j++) {
-    int temp = 0;
-    int temp2 = arr[i];
     int tempdex = i;
-    if (arr[i] > arr[j+1]) {
-      temp = arr[j+1];
+    int temp = 0;
+    int temp2 = data[i];
+    for (int j = 0; j != data.length-1; j++) {
+
+
+    if (data[i] > data[j+1]) {
+      temp = data[j+1];
       tempdex = j+1;
 
     }
     }
-    arr[i] = temp;
-    arr[tempdex] = temp2
+    data[i] = temp;
+    data[tempdex] = temp2;
   }
 
 }
