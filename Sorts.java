@@ -30,5 +30,16 @@ public static void selectionSort(int[] data){
   }
 
 }
+public static void insertionSort(int[] data){
+   for(int i = 1; i < data.length; i ++){
+     int ii = i;
+     while(ii > 0 && data[ii-1]>data[ii]){
+       int iii = data[ii];
+       data[ii]=data[ii-1];
+       data[ii-1] = iii;
+       ii -=1;
+     }
+   }
+ }
 
 }
