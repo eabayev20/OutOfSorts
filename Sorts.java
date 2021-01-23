@@ -16,7 +16,7 @@ public static void selectionSort(int[] data) {
 
      for(int j = i + 1; j < data.length; j ++){
        if( data[j] < data[s]) {
-         startingInd = j;
+         s= j;
        }
      }
 
