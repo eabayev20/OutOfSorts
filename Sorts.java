@@ -10,26 +10,21 @@ public static void bubbleSort (int[] data) {
            }
        }
 }
-public static void selectionSort(int[] data){
+public static void selectionSort(int[] data) {
+   for(int i = 0; i < data.length -1; i++){
+     int s = i;
 
-  for (int i = 0; i != data.length; i++) {
-    int tx = i;
-    int t = 0;
-    int t2 = data[i];
-    for (int j = 0; j != data.length-1; j++) {
+     for(int j = i + 1; j < data.length; j ++){
+       if( data[j] < data[s]) {
+         startingInd = j;
+       }
+     }
 
-
-    if (data[i] > data[j+1]) {
-      t = data[j+1];
-      tx = j+1;
-
-    }
-    }
-    data[i] = t;
-    data[tx] = t2;
+     int temp = data[s];
+     data[s] = data[i];
+     data[i] = temp;
+   }
   }
-
-}
 public static void insertionSort(int[] data){
    for(int i = 1; i < data.length; i ++){
      int ii = i;
